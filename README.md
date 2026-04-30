@@ -29,39 +29,48 @@ Project ini dibangun menggunakan:
 ---
 
 ## 📂 Struktur Folder
+
+```text
 Web_Ipmmo_Semarang_Salatiga/
-├── public/ # Asset statis (logo, gambar, dll)
+├── public/                 # Asset statis (logo, gambar, dll)
 ├── src/
-│ ├── app/ # Routing utama (Next.js App Router)
-│ │ ├── berita/
-│ │ │ └── [slug]/ # Dynamic route untuk detail berita
-│ │ ├── galeri/
-│ │ ├── kegiatan/
-│ │ ├── kontak/
-│ │ ├── program/
-│ │ ├── tentang/
-│ │ ├── layout.tsx # Layout utama
-│ │ ├── page.tsx # Halaman Home
-│ │ └── globals.css # Styling global
-│ │
-│ ├── components/ # Komponen reusable
-│ │ ├── Navbar.tsx
-│ │ ├── Footer.tsx
-│ │ ├── Button.tsx
-│ │ └── Card.tsx
-│ │
-│ ├── sections/ # Section landing page
-│ │ ├── Hero.tsx
-│ │ ├── Features.tsx
-│ │ └── Stats.tsx
-│ │
-│ ├── data/ # Data dummy / statis
-│ │ └── dummy.ts
-│ │
-│ └── types/ # TypeScript types
-│
+│   ├── app/                # Routing utama (Next.js App Router)
+│   │   ├── berita/
+│   │   │   └── [slug]/
+│   │   │       └── page.tsx
+│   │   ├── galeri/
+│   │   │   └── page.tsx
+│   │   ├── kegiatan/
+│   │   │   └── page.tsx
+│   │   ├── kontak/
+│   │   │   └── page.tsx
+│   │   ├── program/
+│   │   │   └── page.tsx
+│   │   ├── tentang/
+│   │   │   └── page.tsx
+│   │   ├── favicon.ico
+│   │   ├── globals.css
+│   │   ├── layout.tsx
+│   │   └── page.tsx
+│   ├── components/
+│   │   ├── Button.tsx
+│   │   ├── Card.tsx
+│   │   ├── Footer.tsx
+│   │   └── Navbar.tsx
+│   ├── data/
+│   │   └── dummy.ts
+│   ├── sections/
+│   │   ├── Features.tsx
+│   │   ├── Hero.tsx
+│   │   └── Stats.tsx
+│   └── types/
 ├── .gitignore
-├── package.json
-├── tsconfig.json
+├── eslint.config.mjs
+├── next-env.d.ts
 ├── next.config.ts
-└── README.md
+├── package-lock.json
+├── package.json
+├── postcss.config.mjs
+├── README.md
+└── tsconfig.json
+```
