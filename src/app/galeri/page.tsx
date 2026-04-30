@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { gallery } from '@/data/dummy';
 
 export const metadata = {
@@ -9,12 +10,28 @@ export const metadata = {
 const Galeri = () => {
   return (
     <div className="pt-24">
-      <section className="bg-primary py-20 text-white">
-        <div className="container-custom text-center">
-          <h1 className="text-4xl md:text-5xl font-extrabold mb-6">Galeri Foto</h1>
-          <p className="text-blue-100 text-lg max-w-2xl mx-auto leading-relaxed">
-            Momen-momen berharga dalam perjalanan IPMMO Korwil Semarang–Salatiga yang terekam dalam lensa.
-          </p>
+      <section className="relative py-20 md:py-28 text-center overflow-hidden">
+        {/* Background Texture with Overlay */}
+        <div 
+          className="absolute inset-0 z-0 opacity-90" 
+          style={{ backgroundImage: "url('/img/baner.png')", backgroundRepeat: 'repeat', backgroundSize: '400px' }}
+        ></div>
+        {/* Soft overlay to ensure text readability */}
+        <div className="absolute inset-0 z-0 bg-gradient-to-b from-[#0f1525]/70 to-[#0f1525]/85"></div>
+        
+        <div className="container-custom relative z-10">
+          <span className="inline-block px-4 py-1.5 bg-[#00c8ff]/20 text-[#00c8ff] font-bold rounded-full mb-4 text-sm tracking-widest uppercase border border-[#00c8ff]/30 backdrop-blur-md shadow-[0_0_15px_rgba(0,200,255,0.3)]">
+            Momen Berharga
+          </span>
+          <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-6 drop-shadow-md tracking-tight">
+            Galeri <span className="text-[#00c8ff]">Foto</span>
+          </h1>
+          
+          <div className="flex items-center justify-center space-x-3 text-sm font-medium text-gray-300 bg-white/5 inline-flex px-6 py-2 rounded-full border border-white/10 backdrop-blur-md">
+            <Link href="/" className="hover:text-[#00c8ff] transition-colors">Home</Link>
+            <span className="text-gray-500">/</span>
+            <span className="text-gray-400">Galeri</span>
+          </div>
         </div>
       </section>
 

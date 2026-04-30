@@ -30,6 +30,7 @@ export interface Activity {
 
 export interface News {
   id: string;
+  slug: string;
   title: string;
   date: string;
   excerpt: string;
